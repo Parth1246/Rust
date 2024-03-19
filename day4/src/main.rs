@@ -13,12 +13,12 @@ struct Footballer {
 // uncomment below code to get the code compiling
 
 
-// impl fmt::Display for Footballer {
-//     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-//         write!(f, "{} ({}) - Goals: {}, Matches: {}, Trophies: {}", 
-//                self.name, self.country, self.goals_scored, self.matches_played, self.trophies_won.join(", "))
-//     }
-// }
+impl fmt::Display for Footballer {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{} ({}) - Goals: {}, Matches: {}, Trophies: {}", 
+                self.name, self.country, self.goals_scored, self.matches_played, self.trophies_won.join(", "))
+    }
+}
 
 fn main() {
     let player = Footballer {
